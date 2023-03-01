@@ -36,3 +36,10 @@ def converted2string(word,converted_table)->str:
         output += ' '.join(y)
         output +=') '
     return output
+
+if __name__ == '__main__':
+    print('欢迎使用普通话转IPA转换器')
+    s = '我能吞下玻璃而不伤身体'
+    for x,y in enumerate(select_table):
+        text = converted2string(s,(mandarin2ipa(s,mode = x)))
+        print(y,text,'\n')
